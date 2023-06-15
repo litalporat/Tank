@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Bullet.cs" />
      <Compile Include="Assets\ConrolScript.cs" />
      <Compile Include="Assets\TankConroller.cs" />
     <Reference Include="UnityEngine">

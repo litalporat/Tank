@@ -7,12 +7,12 @@ public class TankConroller : MonoBehaviour
     // Start is called before the first frame update
     CharacterController controller;
     public Transform cameraTransform;
-    public Transform bulletSpawnPoint;
-    public GameObject bulletPrefab;
-    public float playerSpeed = 5;
+    [SerializeField] Transform bulletSpawnPoint;
+    [SerializeField] GameObject bulletPrefab;
+    public float playerSpeed = 7;
     public float bulletSpeed = 10;
     Vector3 velocity; 
-    public float mouseSensivity = 1; //1
+    public float mouseSensivity = 2; //1
     Vector2 look;
     void Start()
     {
@@ -52,8 +52,8 @@ public class TankConroller : MonoBehaviour
      {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-            bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
+            Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+            // bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
         }
      }
 
